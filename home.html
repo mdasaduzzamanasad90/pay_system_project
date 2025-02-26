@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pay-Home</title>
+    <!-- daisy ui -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.24/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <main class="flex justify-center">
+        <div class="mockup-phone">
+            <div class="camera"></div>
+            <div class="display">
+              <div class="artboard artboard-demo phone-3">
+                <!-- available balance -->
+                 <div class="flex items-center justify-between gap-20 ">
+                    <div class="stats shadow">
+                        <div class="stat">
+                          <div id="main-balance" class="stat-value text-center">0</div>
+                          <div class="stat-desc">Available Balance</div>
+                        </div>
+                    </div>
+                    <div>
+                      <h1 id="logoutbutton" class="btn text-black">Logout</h1>
+                    </div>
+                 </div>
+                 <!-- divider -->
+                 <div class="divider"></div>
+                 <!-- user action -->
+                  <div class="flex gap-3">
+                    <button id="showaddmoney" class="btn">Add-Money</button>
+                    <button id="showcashout" class="btn">Cash-Out</button>
+                    <button id="showtransitionhistory" class="btn">Transaction-History</button>
+                  </div>
+                  <!-- divider -->
+                  <div class="divider"></div>
+                  <!-- add money from -->
+                  <div id="addmoneyfield" class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl hidden">
+                    <form class="card-body">
+                      <div class="form-control">
+                        <label class="label">
+                          <span class="label-text">Money</span>
+                        </label>
+                        <input id="AddMoney" type="text" placeholder="Add Your Amount" class="input input-bordered" required />
+                      </div>
+                      <div class="form-control">
+                        <label class="label">
+                          <span class="label-text">Pin</span>
+                        </label>
+                        <input id="Pin-Number" type="password" placeholder="Add Your Pin Number" class="input input-bordered" required />
+                      </div>
+                      <div class="form-control mt-6">
+                        <button id="addmoney" class="btn btn-primary">Add-Money</button>
+                      </div>
+                    </form>
+                  </div>
+                   <!-- cash out from -->
+                   <div id="cashoutfield" class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl hidden">
+                    <form class="card-body">
+                      <div class="form-control">
+                        <label class="label">
+                          <span class="label-text">Money</span>
+                        </label>
+                        <input id="cash-out" type="text" placeholder="Add Your Amount" class="input input-bordered" required />
+                      </div>
+                      <div class="form-control">
+                        <label class="label">
+                          <span class="label-text">Pin</span>
+                        </label>
+                        <input id="pinnumber" type="password" placeholder="Add Your Pin Number" class="input input-bordered" required />
+                      </div>
+                      <div class="form-control mt-6">
+                        <button id="cashout-button" class="btn btn-primary">Cash-Out</button>
+                      </div>
+                    </form>
+                  </div>
+                  <!-- transition history -->
+                  <div id="transitionhistoryfield" class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl hidden p-5">
+                    <h1 class="underline text-center text-2xl font-bold"> Transaction History</h1>
+                    <br>
+                  </div>
+              </div>
+            </div>
+          </div>
+    </main>
+    <script src="js/utilities.js"></script>
+    <script src="js/addmoney.js"></script>
+    <script src="js/cashoutmoney.js"></script>
+    <script src="js/history.js"></script>
+    <script src="js/logout.js"></script>
+</body>
+</html>
