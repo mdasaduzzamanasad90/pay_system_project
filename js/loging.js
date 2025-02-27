@@ -6,7 +6,7 @@ document.getElementById('login-button').addEventListener('click',function(event)
 
     // condition for login
     if (mobilenumber === '019' && pinnumber === '1234') {
-        window.location.href = '/home.html';
+        window.location.href = 'home.html';
     }
 
     else{
